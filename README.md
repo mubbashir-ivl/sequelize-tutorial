@@ -10,6 +10,11 @@ npm install --save sequelize-cli
 
 npm install --save pg pg-hstore
 
+# Project Commands
+
+sequelize model:generate --name Address --attributes firstName:string,lastName:string,city:string,address:string,country:string,zipcode:string
+
+# Other Commands
 sequelize --help
 
 node_modules/.bin/sequelize init

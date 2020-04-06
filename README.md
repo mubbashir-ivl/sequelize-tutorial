@@ -3,6 +3,8 @@ Learning Sequelize ORM
 
 # Important Commands
 
+node index.js
+
 npm init
 
 npm install --save sequelize
@@ -11,6 +13,8 @@ npm install --save sequelize-cli
 npm install --save pg pg-hstore
 
 # Project Commands
+
+node index.js
 
 sequelize model:generate --name Address --attributes firstName:string,lastName:string,city:string,address:string,country:string,zipcode:string
 

@@ -5,15 +5,18 @@ module.exports = (sequelize, DataTypes) => {
     createdBy: DataTypes.STRING,
     updatedBy: DataTypes.STRING,
     trackingNumber: DataTypes.STRING,
-    shippingAddress: DataTypes.INTEGER,
-    billingAddress: DataTypes.INTEGER
+    shippingAddressId: DataTypes.INTEGER,
+    billingAddressId: DataTypes.INTEGER
   }, {
     underscored: true
   });
   Order.associate = function(models) {
     // associations can be defined here
-    // Order.belongsTo(models.Address, {as: 'shippingAddress'});
-    // Order.belongsTo(models.Address, {as: 'billingAddress'});
+
+    // Shipping Address Association
+    Order.belongsTo(models.Address, { as: 'shippingAddress', foreignKey: { name: 'shippingAddressId' } });
+    // Billing Address Association
+    Order.belongsTo(models.Address, { as: 'billingAddress', foreignKey: { name: 'billingAddressId' } });
   };
   return Order;
 };

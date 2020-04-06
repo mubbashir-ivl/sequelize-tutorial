@@ -12,8 +12,11 @@ module.exports = (sequelize, DataTypes) => {
   });
   Address.associate = function(models) {
     // associations can be defined here
-    // Address.hasOne(models.Order, {as: 'shippingAddress', foreignKey : 'shipping_address'});
-    // Address.hasOne(models.Order, {as: 'billingAddress', foreignKey: 'billing_address'});
+    
+    // Shipping Address Association
+    Address.hasOne(models.Order, {as: 'shippingAddress', foreignKey : 'shipping_address_id'});
+    // Billing Address Association
+    Address.hasOne(models.Order, {as: 'billingAddress', foreignKey : 'billing_address_id'});
   };
   return Address;
 };

@@ -3,7 +3,18 @@ const Op = models.Sequelize.Op;
 
 // Get Addresses
 // console.log('Addresses')
-// models.Address.findAll()
+// models.Address.findAll({
+//   include: [{
+//     model: models.Order,
+//     as: 'shippingAddress'
+//   },{
+//     model: models.Order,
+//     as: 'billingAddress'
+//   }],
+//   where: {
+//     id: 1
+//   }
+// })
 //   .then(addresses => console.log(addresses))
 //   .catch(error => console.log("ERR: " + error));
 

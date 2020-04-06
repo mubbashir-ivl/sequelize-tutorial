@@ -34,7 +34,7 @@ module.exports = {
         shippingAddress: {
           type: Sequelize.INTEGER,
           allowNull: false,
-          field: 'shipping_address',
+          field: 'shipping_address_id',
           references: {
             model: 'addresses',
             key: 'id'
@@ -43,7 +43,7 @@ module.exports = {
         billingAddress: {
           type: Sequelize.INTEGER,
           allowNull: false,
-          field: 'billing_address',
+          field: 'billing_address_id',
           references: {
             model: 'addresses',
             key: 'id'

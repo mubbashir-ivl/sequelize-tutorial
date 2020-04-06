@@ -7,8 +7,8 @@ module.exports = {
       created_by: "test",
       updated_by: "test",
       tracking_number: "123456789ABC",
-      shipping_address: 1,
-      billing_address: 2,
+      shipping_address_id: 1,
+      billing_address_id: 2,
       created_at: new Date(),
       updated_at: new Date()
     }], {});

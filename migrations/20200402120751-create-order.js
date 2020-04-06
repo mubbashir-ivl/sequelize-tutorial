@@ -11,7 +11,7 @@ module.exports = {
           primaryKey: true,
           type: Sequelize.INTEGER
         },
-        userId: {
+        buyerUserId: {
           type: Sequelize.STRING(150),
           allowNull: false,
           field: 'buyer_user_id'

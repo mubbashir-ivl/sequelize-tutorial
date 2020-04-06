@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Order = sequelize.define('Order', {
-    userId: DataTypes.STRING,
+    buyerUserId: DataTypes.STRING,
     createdBy: DataTypes.STRING,
     updatedBy: DataTypes.STRING,
     trackingNumber: DataTypes.STRING,
@@ -12,8 +12,8 @@ module.exports = (sequelize, DataTypes) => {
   });
   Order.associate = function(models) {
     // associations can be defined here
-    Order.belongsTo(models.Address, {as: 'shippingAddress'});
-    Order.belongsTo(models.Address, {as: 'billingAddress'});
+    // Order.belongsTo(models.Address, {as: 'shippingAddress'});
+    // Order.belongsTo(models.Address, {as: 'billingAddress'});
   };
   return Order;
 };

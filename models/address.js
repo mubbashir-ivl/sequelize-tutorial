@@ -6,12 +6,14 @@ module.exports = (sequelize, DataTypes) => {
     city: DataTypes.STRING,
     address: DataTypes.STRING,
     country: DataTypes.STRING,
-    zipcode: DataTypes.STRING
-  }, {});
+    zipCode: DataTypes.STRING
+  }, {
+    underscored: true
+  });
   Address.associate = function(models) {
     // associations can be defined here
-    Address.hasOne(models.Order, {as: 'shippingAddress', foreignKey : 'shipping_address'});
-    Address.hasOne(models.Order, {as: 'billingAddress', foreignKey: 'billing_address'});
+    // Address.hasOne(models.Order, {as: 'shippingAddress', foreignKey : 'shipping_address'});
+    // Address.hasOne(models.Order, {as: 'billingAddress', foreignKey: 'billing_address'});
   };
   return Address;
 };
